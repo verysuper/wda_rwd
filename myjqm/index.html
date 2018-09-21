@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link href="http://jqmdesigner.appspot.com/gk/lib/jquery.mobile/1.4.5/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css" />
+  <link href="css/coffe.css" rel="stylesheet" type="text/css">
+  <link href="css/coffe.min.css" rel="stylesheet" type="text/css">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>
+    $(document).on("mobileinit", function () {
+      $.mobile.autoInitializePage = false;
+      $.mobile.hashListeningEnabled = false;
+    });
+
+    function mobileInitPage() {
+      $.mobile.hashListeningEnabled = true;
+      $.mobile.initializePage();
+    };
+  </script>
+  <script src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <!-- Uncomment the following to include cordova in your android project -->
+  <!--<script src="http://jqmdesigner.appspot.com/platforms/android/cordova.js"></script>-->
+  <!-- GK Loader use RequireJS to load module -->
+  <script src="http://requirejs.org/docs/release/2.1.11/minified/require.js"></script>
+  <!--Plug in GK-->
+  <script src="http://jqmdesigner.appspot.com/components/jquery.gk/jquery.gk.min.js"></script>
+  <!-- Load GK components -->
+  <script components="http://jqmdesigner.appspot.com/components/gk-ext/gmap.html,http://jqmdesigner.appspot.com/components/gk-ext/bxslider.html,http://jqmdesigner.appspot.com/components/gk-ext/gk-text.html,http://jqmdesigner.appspot.com/components/gk-ext/youtube.html,http://jqmdesigner.appspot.com/components/gk-ext/image.html"
+  callback="mobileInitPage" src="http://jqmdesigner.appspot.com/components/gk-loader/gk-loader.js"></script>
+  <title>EZo App</title>
+</head>
+
+<body gk-app>
+  <!-- Page: home  -->
+  <div id="home" data-role="page">
+  <div data-role="header" data-position="fixed">
+    <h3>好棒棒咖啡店</h3>
+    <a class="ui-btn ui-btn-left ui-icon-home ui-btn-icon-left">首頁</a>
+  </div>
+  <div role="main" class="ui-content">
+    <ul is="bxslider" style="height:200px;width:100%" captions="true">
+      <li>
+        <img style="width:100% height:200px;" src="images/file_572175c666096 - 1.png" title="Funky roots">
+      </li>
+      <li>
+        <img style="width:100%; height:200px;" src="images/banner-image_06.png">
+      </li>
+      <li>
+        <img style="width:100%; height:200px;" src="images/banner-image_10.png">
+      </li>
+      <li>
+        <img style="width:100%; height:200px;" src="images/banner-image_18.png">
+      </li>
+    </ul>
+    <h3 is="gk-text" style="text-align:center;margin-top: 50px;">手工咖啡製作專門店</h3>
+    <ul data-role="listview" data-inset="true">
+      <li data-role="list-divider" style="margin-top: 10px;">咖啡禮品項目</li>
+      <li>
+        <a href="#product1">
+          <img src="images/Coffee-goods_11.jpg" class="ui-li-icon">超猛咖啡豆</a>
+      </li>
+      <li>
+        <a href="#product2">
+          <img src="images/Coffee-goods_13.jpg" class="ui-li-icon">絕世龍眼蜜</a>
+      </li>
+      <li>
+        <a href="#product3">
+          <img src="images/Coffee-goods_16.jpg" class="ui-li-icon">無敵濾泡式</a>
+      </li>
+    </ul>
+  </div>
+  <div data-position="fixed" data-role="footer">
+    <div data-role="navbar">
+      <ul>
+        <li>
+          <a data-icon="eye" href="#about">關於好棒棒</a>
+        </li>
+        <li>
+          <a data-icon="heart" href="#feature">餐飲特色</a>
+        </li>
+        <li>
+          <a data-icon="location" href="#traffic">交通景點</a>
+        </li>
+        <li>
+          <a data-icon="phone" href="#call">連絡我們</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+  <!-- Page: about  -->
+  <div id="about" data-role="page">
+    <div data-role="header" data-position="fixed">
+      <h3>好棒棒咖啡店</h3>
+      <a class="ui-btn ui-btn-left ui-icon-home ui-btn-icon-left" href="#home">首頁</a>
+      
+    </div>
+    <div role="main" class="ui-content">
+      <img style="width:100%;" src="images/file_572175c666096 - 1.png" is="image">
+      <h1 is="gk-text">關於 左宏昌 15</h1>
+		<p>
+		好棒棒咖啡莊園在台南市東山區已經營多年，並擁有7000坪的自家休閒農場，<br>
+		用來種植東山咖啡，培育過程中絕不噴農藥，也不強行發酵，<br>
+		烘焙出來的咖啡除了帶有獨特的甘醇風味之外，<br>
+		最大的特色便是喝了不會心悸，<br>
+		也因此附近的上班族都很放心的每天來上一杯<br>
+		</p>
+		<p>
+		成長中的青少年 對咖啡因的興奮作用較敏感，<br>
+		比較會有心悸..影響睡眠的情形。<br>
+
+		咖啡因對有高血壓及心血管疾病的人有強心作用，<br>
+		但同時也會使心跳加快，血壓增高，<br>
+		亦容易引起心肌缺氧，對病情的控制不利。<br>
+
+		懷孕的婦女過量的咖啡 會增加流產 及 胎兒發育遲緩的機會。<br>
+		停經後的 婦女與老年人 過多的咖啡因會導致 鈣質的流失..骨質疏鬆症的機會。<br>
+
+		咖啡因會刺激胃酸的分泌，胃潰瘍的患者可能惡化消化性潰瘍的病程。<br>
+		空腹時不要喝咖啡，以免胃酸過多。<br>
+
+		喝咖啡確實可能增加膽固醇，對心臟血管疾病的人非常不利。<br>
+		咖啡中含有松烯（terpene芳香性碳水化合物）<br>
+		這種油性的物質，對於心血管的影響因人而異，<br>
+		但是通常它會造成血膽固醇上昇，不可不察。<br>
+		</p>
+		<p>
+		設計師:左宏昌 15
+		</p>
+
+    </div>
+    <div data-position="fixed" data-role="footer">
+      <div data-role="navbar">
+        <ul>
+          <li>
+            <a data-icon="eye">關於東山</a>
+          </li>
+          <li>
+            <a data-icon="heart" href="#feature">餐飲特色</a>
+          </li>
+          <li>
+            <a data-icon="location" href="#traffic">交通景點</a>
+          </li>
+          <li>
+            <a data-icon="phone" href="#call">連絡我們</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- Page: feature  -->
+  <div id="feature" data-role="page">
+    <div data-role="header" data-position="fixed">
+      <h3>好棒棒咖啡店</h3>
+      <a class="ui-btn ui-btn-left ui-icon-home ui-btn-icon-left" href="#home">首頁</a>
+      
+    </div>
+    <div role="main" class="ui-content">
+	  	<img style="width:100%;" src="images/file_572175c666096 - 1.png" is="image">
+		  <iframe width=100% src="https://www.youtube.com/embed/F8DN2XyPESo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		<h1>好棒棒</h1>
+		<h3>出色料理美妙卓越</h3>
+		<p>	
+		好棒棒餐廳以德、奧料理為主要特色，提供您風味十足、添加特殊香料的精緻菜色，如香味四溢的「嫩烤法式香料小羊排」、鮮嫩多汁的「美國頂級肋眼牛排」、多種香料醃製成皮薄肉嫩的「維也納烤雞腿」與皮脆肉軟的「德國香烤豬腳」等，而豬腳搭配冰涼的德國華士坦生啤酒，滋味更顯美妙。
+		另值得一提的是，好棒棒注重每位來賓的衛生、安全、健康，店裡飲用水特別採用奈米淨水處理器，不僅水分子極小、水質變得柔軟順口，且含氧量相當豐富，從玻璃杯中滿佈的微小汽泡即可窺知店裡的飲用水真的一極棒。
+
+		豐富套餐令人驚豔
+		招牌豐富商業套餐，含麵包、湯或沙拉、主菜及甜點、飲料。另主廚推薦各式套餐均含開胃菜、麵包、湯、沙拉、主菜及甜點、飲料。又師傅精製甜點，如德式乳酪蛋糕、提拉米蘇等也令人驚豔。
+		</p>
+	  </div>
+    <div data-position="fixed" data-role="footer">
+      <div data-role="navbar">
+        <ul>
+          <li>
+            <a data-icon="eye" href="#about">關於東山</a>
+          </li>
+          <li>
+            <a data-icon="heart">餐飲特色</a>
+          </li>
+          <li>
+            <a data-icon="location" href="#traffic">交通景點</a>
+          </li>
+          <li>
+            <a data-icon="phone" href="#call">連絡我們</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- Page: traffic  -->
+  <div id="traffic" data-role="page">
+    <div data-role="header" data-position="fixed">
+      <h3>好棒棒咖啡店</h3>
+      <a class="ui-btn ui-btn-left ui-icon-home ui-btn-icon-left" href="#home">首頁</a>
+      
+    </div>
+    <div role="main" class="ui-content">
+		<img style="width:100%;" src="images/file_572175c666096 - 1.png" is="image">
+      <div is="gmap" style="width:100%;height:500px;" zoom="12" address="Qianzhen, TW"></div>
+		<h2>交通與特色景點介紹</h2>
+		<p>
+		交通資訊<br>
+		【大眾運輸】<br>
+		1.台鐵<br>
+		搭至新營火車站→對面的新營客運總站搭「新營往東山」的車次→前往東山，經過東山大街路口後的那一站下車→步行3分鐘即達<br>
+		2.客運<br>
+		至新營客運總站搭「新營往東山」的車次→前往東山，經過東山大街路口後的那一站下車→步行3分鐘即達<br>
+
+		【自行開車】<br>
+		1.國道三號→在白河交流道下→朝東山/白河方向前進→於172縣道向左轉→於中山路(165縣道前進)→在所前路處微靠右走→於中興路(南100-1鄉道)向左轉→即達。<br>
+		2.國道一號→新營交流道下→長榮路(172縣道)→長榮陸橋下右轉→開元路→左轉東山三路→再左轉東山路→直行至新東路二段→東山大街路口右轉中興南路→即達。<br>
+		</p>
+    </div>
+    <div data-position="fixed" data-role="footer">
+      <div data-role="navbar">
+        <ul>
+          <li>
+            <a data-icon="eye" href="#about">關於東山</a>
+          </li>
+          <li>
+            <a data-icon="heart" href="#feature">餐飲特色</a>
+          </li>
+          <li>
+            <a data-icon="location">交通景點</a>
+          </li>
+          <li>
+            <a data-icon="phone" href="#call">連絡我們</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- Page: call  -->
+  <div id="call" data-role="page">
+    <div data-role="header" data-position="fixed">
+      <h3>好棒棒咖啡店</h3>
+      <a class="ui-btn ui-btn-left ui-icon-home ui-btn-icon-left" href="#home">首頁</a>
+      
+    </div>
+    <div role="main" class="ui-content">
+		<img style="width:100%;" src="images/file_572175c666096.png" is="image">
+      <h1 is="gk-text">電話:</h1>
+		<p>02-882-5252</p>
+      <h1 is="gk-text">Email:</h1>
+		<p>0000@gmail.com</p>
+    </div>
+    <div data-position="fixed" data-role="footer">
+      <div data-role="navbar">
+        <ul>
+          <li>
+            <a data-icon="eye" href="#about">關於東山</a>
+          </li>
+          <li>
+            <a data-icon="heart" href="#feature">餐飲特色</a>
+          </li>
+          <li>
+            <a data-icon="location" href="#traffic">交通景點</a>
+          </li>
+          <li>
+            <a data-icon="phone">連絡我們</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- Page: product1  -->
+  <div id="product1" data-role="page">
+    <div data-role="header" data-position="fixed">
+      <h3>好棒棒咖啡店</h3>
+      <a class="ui-btn ui-btn-left ui-icon-home ui-btn-icon-left" href="#home">首頁</a>
+      
+    </div>
+    <div role="main" class="ui-content">
+      <img style="width:100%;" src="images/product/Coffee-goods_19.jpg" is="image">
+      <div class="ui-grid-b" style="height:95px">
+        <div class="ui-block-a" style="height:100%">
+          <img style="width:100%;" src="images/product/Coffee-goods_18.jpg" is="image">
+        </div>
+        <div class="ui-block-b" style="height:100%">
+          <img style="width:100%;" src="images/product/Coffee-goods_17.jpg" is="image">
+        </div>
+        <div class="ui-block-c" style="height:100%">
+          <img style="width:100%;" src="images/product/Coffee-goods_13.jpg" is="image">
+        </div>
+      </div>
+      <h1 is="gk-text">超猛咖啡豆</h1>
+      <a class="ui-btn ui-icon-shop ui-btn-icon-right" href="https://goo.gl/forms/NTuWkbKY17ztFOe23">訂購商品</a>
+    </div>
+    <div data-position="fixed" data-role="footer">
+      <div data-role="navbar">
+        <ul>
+          <li>
+            <a data-icon="eye" href="#about">關於東山</a>
+          </li>
+          <li>
+            <a data-icon="heart" href="#feature">餐飲特色</a>
+          </li>
+          <li>
+            <a data-icon="location" href="#traffic">交通景點</a>
+          </li>
+          <li>
+            <a data-icon="phone">連絡我們</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- Page: product2  -->
+  <div id="product2" data-role="page">
+    <div data-role="header" data-position="fixed">
+      <h3>好棒棒咖啡店</h3>
+      <a class="ui-btn ui-btn-left ui-icon-home ui-btn-icon-left" href="#home">首頁</a>
+      
+    </div>
+    <div role="main" class="ui-content">
+      <img style="width:100%;" src="images/product/Coffee-goods_12.jpg" is="image">
+      <div class="ui-grid-b" style="height:95px">
+        <div class="ui-block-a" style="height:100%">
+          <img style="width:100%;" src="images/product/Coffee-goods_14.jpg" is="image">
+        </div>
+        <div class="ui-block-b" style="height:100%">
+          <img style="width:100%;" src="images/product/Coffee-goods_16.jpg" is="image">
+        </div>
+        <div class="ui-block-c" style="height:100%">
+          <img style="width:100%;" src="images/product/Coffee-goods_07.jpg" is="image">
+        </div>
+      </div>
+      <h1 is="gk-text">絕世龍眼蜜</h1>
+      <a class="ui-btn ui-icon-shop ui-btn-icon-right" href="https://goo.gl/forms/b7mx2KmK7w6FSZeV2">訂購商品</a>
+    </div>
+    <div data-position="fixed" data-role="footer">
+      <div data-role="navbar">
+        <ul>
+          <li>
+            <a data-icon="eye" href="#about">關於東山</a>
+          </li>
+          <li>
+            <a data-icon="heart" href="#feature">餐飲特色</a>
+          </li>
+          <li>
+            <a data-icon="location" href="#traffic">交通景點</a>
+          </li>
+          <li>
+            <a data-icon="phone">連絡我們</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- Page: product3  -->
+  <div id="product3" data-role="page">
+    <div data-role="header" data-position="fixed">
+      <h3>好棒棒咖啡店</h3>
+      <a class="ui-btn ui-btn-left ui-icon-home ui-btn-icon-left" href="#home">首頁</a>
+      
+    </div>
+    <div role="main" class="ui-content">
+      <img style="width:100%;" src="images/product/Coffee-goods_01.jpg" is="image">
+      <div class="ui-grid-b" style="height:95px">
+        <div class="ui-block-a" style="height:100%">
+          <img style="width:100%;" src="images/product/Coffee-goods_02.jpg" is="image">
+        </div>
+        <div class="ui-block-b" style="height:100%">
+          <img style="width:100%;" src="images/product/Coffee-goods_03.JPG" is="image">
+        </div>
+        <div class="ui-block-c" style="height:100%">
+          <img style="width:100%;" src="images/product/Coffee-goods_04.jpg" is="image">
+        </div>
+      </div>
+      <h1 is="gk-text">無敵濾泡式</h1>
+      <a class="ui-btn ui-icon-shop ui-btn-icon-right" href="https://goo.gl/forms/kXT8579aPktxofGQ2">訂購商品</a>
+    </div>
+    <div data-position="fixed" data-role="footer">
+      <div data-role="navbar">
+        <ul>
+          <li>
+            <a data-icon="eye" href="#about">關於東山</a>
+          </li>
+          <li>
+            <a data-icon="heart" href="#feature">餐飲特色</a>
+          </li>
+          <li>
+            <a data-icon="location" href="#traffic">交通景點</a>
+          </li>
+          <li>
+            <a data-icon="phone">連絡我們</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
